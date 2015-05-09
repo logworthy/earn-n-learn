@@ -16,6 +16,17 @@ library(ggplot2)
 
 ########## FUNCTIONS ##########
 
+# Range to explore functions
+numeric_variable <- 1:20
+
+logistic_function <- function(x) {
+  0.25+0.5/(1+exp(-(1*(x-12)+0.1)))
+}
+
+linear_function <- function(x) {
+  0.25+x*0.025
+}
+
 # Draw from the beta dist
 draw_belief <- Vectorize(function(s, f) {
   rbeta(1,s,f)
